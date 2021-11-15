@@ -113,4 +113,19 @@ export default makeStyles((theme) => ({
       padding: 10,
     },
   },
+  // image
+  imageDialogue: {
+    height: '100%',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    overflow: 'hidden',
+    objectFit: 'cover',
+  },
+  iconBtn: {
+    position: 'absolute !important',
+    color: '#fff !important',
+    backgroundColor: 'black !important',
+    bottom: '0px !important',
+  },
 }));

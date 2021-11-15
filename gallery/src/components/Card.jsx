@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../mui/styles/Common';
 import {
   Card,
@@ -9,15 +9,21 @@ import {
   Avatar,
 } from '@mui/material';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import PopUp from './PopUp';
 
 const Cards = (image) => {
   const classes = styles();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    console.log(image.image);
+    console.log(open);
   }, [image]);
   return (
-    <Card sx={{ maxWidth: 345 }} className={classes.cardContainer}>
+    <Card
+      sx={{ maxWidth: 345 }}
+      className={classes.cardContainer}
+      onClick={() => setOpen(true)}
+    >
       <CardMedia
         component="img"
         height="140"
@@ -53,6 +59,7 @@ const Cards = (image) => {
           </Grid>
         </Grid>
       </CardActions>
+      <PopUp open={open} change={(val) => setOpen(val)} image={image} />
     </Card>
   );
 };
