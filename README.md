@@ -14,6 +14,8 @@ You can search any image of your choice , view it , and clicking on it  will ope
 Clone the project 
 
 Go to the root directory
+
+cd gallery
 ```bash
   npm install
 ```
